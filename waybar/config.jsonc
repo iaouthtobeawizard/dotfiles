@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "width": 1000,
+    "modules-left": [
+        "pulseaudio",
+        "mpris"
+    ],
+    "modules-center": [
+        "clock#left",
+        "hyprland/workspaces",
+        "clock#right"
+    ],
+    "modules-right": [
+        "battery",
+        "workspace-taskbar"
+    ],
+    "battery": {
+    "bat": "BAT2",
+    "interval": 60,
+    "format": "{icon} {capacity}%",
+    "format-icons": {
+        "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        }
+    },
+    "clock#left": {
+        "format": "{:%H}"
+    },
+    "clock#right": {
+        "format": "{:%M}"
+    },
+    "hypralnd/workspaces": {
+        "enable-bar-scroll": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10":""
+        }
+
+    },
+    "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": "",
+    "tooltip": false,
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+},
+"mpris": {
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "{status_icon} <i>{dynamic}</i>",
+	"tooltip": false,
+    "player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸"
+	},
+   "dynamic-order": [
+    "title","artist"
+   ]
+	// "ignored-players": ["firefox"]
+}
+}
