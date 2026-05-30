@@ -1,0 +1,164 @@
+{
+    "layer": "top",
+    // "width": 1000,
+    "modules-left": [
+        "custom/arch",
+        "custom/powermenu",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock#right",
+        "hyprland/workspaces",
+        "clock#left"
+    ],
+    "modules-right": [
+        "mpris",
+        "network",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "baterry"
+    ],
+
+    "hyprland/workspace": {
+        "disable-scroll": false,
+        "cursor": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10":""
+        }
+    },
+
+    "custom/arch": {
+        "format": " 󰣇 ",
+        "on-click": "./.config/rofi/launchers/type-6/launcher.sh",
+        "tooltip": false
+    },
+
+    "cpu": {
+    "interval": 5,
+    "format": "󰍛 {usage}%",
+    "states": {
+        "warning": 50,
+        "critical": 80
+    }
+  },
+
+    "clock#right": {
+    "format": "{:%H}",
+    "tooltip":false
+  },
+
+  "clock#left": {
+    "format": "{:%M}",
+    "tooltip":false
+  },
+
+    "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon} {essid}",
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+    
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "on-click": "pavucontrol",
+    "tooltip":false,
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+
+  "custom/powermenu": {
+    "format":" ⭘ ",
+    "on-click": "nwg-bar"
+  },
+
+    "mpris": {
+    "format": "{artist} - {title}",
+    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+    "max-length": 20,
+    "status-icons": {
+      "paused": "⏸"
+    }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40
+  },
+    "memory": {
+    "format": " {used:0.1f}gb",
+    "interval": 2,
+    "on-click": "btop"
+  }
+}

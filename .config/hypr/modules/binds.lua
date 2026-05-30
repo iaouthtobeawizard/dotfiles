@@ -1,10 +1,10 @@
 local terminal    = "kitty"
 local fileManager = "nemo"
-local menu        = "rofi -show drun"
+local menu        ="./.config/rofi/launchers/type-6/launcher.sh"
 local mainMod = "SUPER"
 local textEditor = "code"
 local browser = "brave"
- 
+
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 local killWindowBind = hl.bind(mainMod .. " + K", hl.dsp.window.kill())
@@ -16,7 +16,8 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(textEditor))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + SHIFT + R ", hl.dsp.exec_cmd("pkill waybar; waybar &"))
+hl.bind(mainMod .. " + SHIFT + R ", hl.dsp.exec_cmd("./.config/waybar/scripts/launch.sh"))
+hl.bind(mainMod .. " + N ", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

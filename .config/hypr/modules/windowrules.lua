@@ -22,3 +22,8 @@ hl.window_rule({
     no_focus = true,
 })
 
+hl.layer_rule({
+	name = "notification-animations",
+	match = { namespace = "swaync-control-centre"},
+	animation = "slide top"
+})

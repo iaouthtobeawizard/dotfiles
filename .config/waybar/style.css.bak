@@ -57,5 +57,22 @@ window#waybar {
 }
 
 
+#battery {
+    margin: 24px;
+}
 
 
+#taskbar button {
+    background-color: @bg4;
+    color: transparent;
+    padding: 0 15px;
+    border-radius: 99px;
+    margin: 5px 2px;
+    min-width: 4px;
+}
+
+#taskbar button.active {
+    background-color: @blue;
+    min-width: 1.4rem;
+    transition: all 200ms ease-in-out;
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "label": "",
+    "exec": "hyprlock",
+    "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
+  },
+  {
+    "label": "",
+    "exec": "systemctl suspend",
+    "icon": "/home/napoleon/.config/nwg-bar/sleep.png"
+  },
+  {
+    "label": "",
+    "exec": "systemctl reboot",
+    "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
+  },
+  {
+    "label": "",
+    "exec": "systemctl -i poweroff",
+    "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
+  }
+]

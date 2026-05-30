@@ -16,3 +16,17 @@
 @define-color grey0 #a89984;
 @define-color grey1 #928374;
 @define-color grey2 #7c6f64;
+
+@define-color background @bg1;
+@define-color background-alt @bg2;
+@define-color hover @bg3;
+@define-color selected @blue;
+
+@define-color text @fg;
+@define-color text-alt @grey0;
+
+@define-color notification-bg @bg1;
+@define-color center-bg @bg0;
+@define-color center-notification-bg @bg2;
+
+@define-color urgent @red;
